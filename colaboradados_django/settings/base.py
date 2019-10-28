@@ -7,13 +7,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-ROOT_DIR = (environ.Path(__file__) - 3)
-
-env = environ.Env()
-# os.environ["DJANGO_READ_DOT_ENV_FILE"] = "true"
-READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
-env.read_env(ROOT_DIR('.env'))
-
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
